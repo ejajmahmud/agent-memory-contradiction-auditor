@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-memory-contradiction-auditor"
+version = "0.1.0"
+description = "Non-monotonic logic checker detecting contradictions between newly ingested user preferences and stored historical beliefs"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-memory-contradiction-auditor = "agent_memory_contradiction_auditor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_memory_contradiction_auditor*"]
